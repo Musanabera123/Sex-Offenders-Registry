@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexual Offender Registry</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Sexual Offender Registry</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="navigate('home')">Home</a></li>
+                <li><a href="#about" onclick="navigate('about')">About</a></li>
+                <li><a href="#contactus" onclick="navigate('contactus')">Contact Us</a></li>
+                <li><a href="#services" onclick="navigate('services')">Services</a></li>
+                <li><a href="#reportCrime" onclick="navigate('reportCrime')">Report Crime</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content-section">
+            <h2>Welcome to the Sexual Offender Registry</h2>
+            <p>Providing public safety information and resources.</p>
+        </section>
+        <section id="about" class="content-section" style="display:none;">
+            <h2>About Us</h2>
+            <p>Information about our organization and mission.</p>
+        </section>
+        <section id="contactus" class="content-section" style="display:none;">
+                <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-wrapper">
+                <div class="contact-form">
+                <h3>Send US Message</h3>
+                <form>
+                    <div class="form-group">
+                     <input type="text" name="name" placeholder="Tour Name">   
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Tour Email">   
+                       </div>
+                       <div class="form-group">
+                        <textarea name="message" placeholder="Your Message"></textarea>  
+                       </div>
+                       <button type="submit">Send message</button>
+                </form>          
+            </div>
+            <div class="contact-info">
+                <h3> Contact Information</h3>
+                <p><i class="fas fa-phone"></i> +250 788 725 967</p>
+                <p><i class="fas fa-envelope"></i>ug2217447@ines.ac.rw</p>
+                <p><i class="fas fa-map-marker-alt"></i>123 street, Kigali, Rwanda</p>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section id="services" class="content-section" style="display:none;">
+            <h2>Our Services</h2>
+            <p>Details of the services we offer.</p>
+            
+        </section>
+        <section id="reportCrime" class="content-section" style="display:none;">
+            <h2>Report a Crime</h2>
+            <p>Instructions on how to report a crime.</p>
+            <input type="text" id="crimeDescription" placeholder="Describe the crime">
+            <button onclick="reportCrime()">Report</button>
+        </section>
+        <section class="search">
+            <h2>Search Offender</h2>
+            <input type="text" id="searchInput" placeholder="Enter name or location">
+            <button onclick="searchOffender()">Search</button>
+        </section>
+        <section class="results">
+            <h2>Results</h2>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Location</th>
+                        <th>Crime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Results will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="scrip1.js"></script>
+</body>
+</html>
